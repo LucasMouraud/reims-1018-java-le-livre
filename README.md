@@ -7,5 +7,4 @@ Lucas Mouraud
 
 Gaetan Evrard
 
-- Nicolas Luzurier https://github.com/hifrcy
-
+Nicolas Luzurier
