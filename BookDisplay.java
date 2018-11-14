@@ -13,5 +13,4 @@ public class BookDisplay{
         String name  = sc.nextLine();
         return "Genial " + name + ", entre 'go' pour commencer";
     }
-   
 }

@@ -8,21 +8,26 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class PageReader{
-    public static void pageReading(){
-    FileReader jsonFile = null;
-    try {
-        // lecture du fichier json
-        jsonFile = new FileReader(Livre.json);
-    } catch (FileNotFoundException e) {
-        e.printStackTrace();
-    }
-    JSONParser parser = new JSONParser();
+    public static void readJson(){
+        FileReader jsonFile = null;
+        try {
+            // lecture du fichier json
+            jsonFile = new FileReader("Livre.json");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        JSONParser parser = new JSONParser();
         Object jsonParsed = null;
         try{
             jsonParsed = parser.parse(jsonFile);
         } catch (ParseException | IOException e) {
             e.printStackTrace();
         }
-        JSONObject root = (JSONObject) jsonParsed;
+        JSONArray root = (JSONArray) jsonParsed;
+    }
+
+    public static void readPage(){
+
+        String content = (String) root.get ("content");
     }
 }
