@@ -1,8 +1,8 @@
 public class Book{
 
     public static void main (String[] args){
-        HomeDisplay.home();
-        String pseudo = HomeDisplay.askName();
+        BookDisplay.home();
+        String pseudo = BookDisplay.askName();
         System.out.println(pseudo);
     }
 }
