@@ -3,7 +3,6 @@ public class Page{
 	private int id;
 	private String content;
 	private Array nextPages;
-}
 
 	public Page(int id, String content, Array nextPages){
 		this.id = id;
@@ -34,3 +33,4 @@ public class Page{
 	public void setArray(){
 		this.array = array;
 	}
+}
