@@ -11,6 +11,10 @@ public class BookDisplay{
     public static String askName(){      
         System.out.println("Veuillez saisir votre pseudo : ");
         String name  = sc.nextLine();
-        return "Genial " + name + ", entre 'go' pour commencer";
+        return name;
+    }
+
+    public static void displayName(String name){
+        System.out.println("Genial " + name + ", entre 'go' pour commencer");
     }
 }
