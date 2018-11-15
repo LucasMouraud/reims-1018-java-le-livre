@@ -2,20 +2,17 @@ public class Page{
 
 	private int id;
 	private String content;
-	private Array nextPages;
-}
 
-	public Page(int id, String content, Array nextPages){
+	public Page(int id, String content){
 		this.id = id;
 		this.content = content;
-		this.nextPages = nextPages;
 	}
 
 	public int getId(){
 		return this.id;
 	}
 
-	public void setId(){
+	public void setId(int id){
 		this.id = id;
 	}
 
@@ -23,14 +20,7 @@ public class Page{
 		return this.content;
 	}
 
-	public void setContent(){
+	public void setContent(String content){
 		this.content = content;
 	}
-
-	public int getArray(){
-		return this.array;
-	}
-
-	public void setArray(){
-		this.array = array;
-	}
+}
