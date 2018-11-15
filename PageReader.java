@@ -24,10 +24,13 @@ public class PageReader{
             e.printStackTrace();
         }
         JSONArray root = (JSONArray) jsonParsed;
-        JSONObject page = (JSONObject) root.get(0);
-        int id = Math.toIntExact((long) page.get("id"));
-        String content = (String) page.get("content");
+        
+        Page[] pages = new Page[1];
 
-        Page pageUne = new Page(id, content);
+        JSONObject page_object = (JSONObject) root.get(0);
+        int id = Math.toIntExact((long) page_object.get("id"));
+        String content = (String) page_object.get("content");
+
+        pages[0] = new Page(id, content);
     }
 }
