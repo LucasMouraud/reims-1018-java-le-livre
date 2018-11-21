@@ -25,11 +25,12 @@ public class BookDisplay{
     }
 
     public static void displayGo(String go){
-        if(go != "go" || go != "Go"){
+        if(go.equals("go") || go.equals("Go")){
+            System.out.println("bien joué, tu sais écrire 'go'");
+            //System.out.println(PageReader.pages[0].getContent());
+        }
+        else {
             System.out.println("Vous n'avez pas rentré 'go'");
         }
-        /*else {
-            System.out.println(PageReader.pages[0].getContent());
-        }*/
     }
 }
