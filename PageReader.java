@@ -44,5 +44,6 @@ public class PageReader{
         String content = (String) page_object.get("content");
 
         pages[0] = new Page(id, content);
+        System.out.println(pages[0].getContent());
     }
 }
