@@ -28,11 +28,7 @@ public class BookDisplay{
         while(!go.toLowerCase().equals("go")){
                 System.out.println("Vous n'avez pas rentré 'go' mais " + go);
                 go = askGo();
-            //System.out.println(PageReader.pages[0].getContent());
         }
-        System.out.println("Bravo");
-    }
-    
-        
-    
+//        System.out.println(PageReader.pages[0].getContent());
+    }    
 }

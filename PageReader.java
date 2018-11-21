@@ -1,3 +1,4 @@
+import java.util.*;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -35,14 +36,18 @@ public class PageReader{
 
         // récupérer la racine du fichier
         JSONArray root = (JSONArray) jsonParsed;
+        // root.size()
         
         // créer un tableau pour stocker les données
-        Page[] pages = new Page[1];
-
+        ArrayList<Page> pages = new ArrayList<Page>();
         JSONObject page_object = (JSONObject) root.get(0);
         int id = Math.toIntExact((long) page_object.get("id"));
         String content = (String) page_object.get("content");
 
-        pages[0] = new Page(id, content);
+        pages.add(new Page(id, content));
+    }
+    public ArrayList<Page> getFirstPage(){
+        return this.pages;
+        
     }
 }
