@@ -29,6 +29,5 @@ public class BookDisplay{
                 System.out.println("Vous n'avez pas rentré 'go' mais " + go);
                 go = askGo();
         }
-//        System.out.println(PageReader.pages[0].getContent());
     }    
 }

@@ -15,7 +15,10 @@ public class PageReader{
 
     private final static String JSON_BOOK_PATH = "Livre.json";
 
-    public static void readJson(){
+    private List<Page> pages;
+
+    public PageReader() {
+        this.pages = new ArrayList<Page>();
 
         //lire le fichier json
         FileReader jsonFile = null;
@@ -39,23 +42,17 @@ public class PageReader{
         // root.size()
         
         // créer un conteneur pour stocker les données
-        ArrayList<Page> pages = new ArrayList<Page>();
         JSONObject page_object = (JSONObject) root.get(0);
         int id = Math.toIntExact((long) page_object.get("id"));
         String content = (String) page_object.get("content");
 
-        pages.add(new Page(id, content));
-    }
-
-    public PageReader() {
-        this.pages = new ArrayList<Page>();
+        this.pages.add(new Page(id, content));
     }
 
     public Page getFirstPage(){
         return this.pages.get(0);
     }
 
-    private List<Page> pages;
 }
 /*
 PageReader.readJson();
