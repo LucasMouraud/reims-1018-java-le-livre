@@ -15,7 +15,7 @@ public class PageReader{
 
     private final static String JSON_BOOK_PATH = "Livre.json";
 
-    private List<Page> pages;
+    private ArrayList<Page> pages;
 
     public PageReader() {
         this.pages = new ArrayList<Page>();
@@ -46,11 +46,14 @@ public class PageReader{
         int id = Math.toIntExact((long) page_object.get("id"));
         String content = (String) page_object.get("content");
 
-        this.pages.add(new Page(id, content));
+        Page page = new Page(id, content);
+        this.pages.add(page);
+
     }
 
     public Page getFirstPage(){
-        return this.pages.get(0);
+        Page page = this.pages.get(0);
+        return page;
     }
 
 }

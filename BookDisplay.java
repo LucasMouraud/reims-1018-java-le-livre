@@ -26,8 +26,12 @@ public class BookDisplay{
 
     public static void displayGo(String go){
         while(!go.toLowerCase().equals("go")){
-                System.out.println("Vous n'avez pas rentré 'go' mais " + go);
-                go = askGo();
+            System.out.println("Vous n'avez pas rentré 'go' mais " + go);
+            go = askGo();
         }
-    }    
+    }
+    /*
+    public static void displayFirstPage(){
+        System.out.println(PageReader.getFirstPage());
+    }   */ 
 }
