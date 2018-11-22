@@ -1,3 +1,4 @@
+import java.util.*;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -14,7 +15,10 @@ public class PageReader{
 
     private final static String JSON_BOOK_PATH = "Livre.json";
 
-    public static void readJson(){
+    private List<Page> pages;
+
+    public PageReader() {
+        this.pages = new ArrayList<Page>();
 
         //lire le fichier json
         FileReader jsonFile = null;
@@ -35,14 +39,31 @@ public class PageReader{
 
         // récupérer la racine du fichier
         JSONArray root = (JSONArray) jsonParsed;
+        // root.size()
         
-        // créer un tableau pour stocker les données
-        Page[] pages = new Page[1];
-
+        // créer un conteneur pour stocker les données
         JSONObject page_object = (JSONObject) root.get(0);
         int id = Math.toIntExact((long) page_object.get("id"));
         String content = (String) page_object.get("content");
 
-        pages[0] = new Page(id, content);
+        this.pages.add(new Page(id, content));
     }
+
+    public Page getFirstPage(){
+        return this.pages.get(0);
+    }
+
 }
+/*
+PageReader.readJson();
+
+PageReader p1;
+p1 = new PageReader();
+
+p1.getFirstPage();
+
+PageReader p2;
+p2 = new PageReader();
+
+p2.getFirstPage();
+*/
