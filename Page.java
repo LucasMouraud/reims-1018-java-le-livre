@@ -2,10 +2,12 @@ public class Page{
 
 	private int id;
 	private String content;
+	private int[] nextPages;
 
 	public Page(int id, String content){
 		this.id = id;
 		this.content = content;
+		this.nextPages = nextPages;
 	}
 
 	public int getId(){
@@ -23,10 +25,12 @@ public class Page{
 	public void setContent(String content){
 		this.content = content;
 	}
-}
 
-/*
-Page p = new Page(1, "hello");
-p.setId(23);
-p.getId(); // 23
-*/
+	public int[] getNextPages(){
+		return this.nextPages;
+	}
+
+	public void setNextPages(int[] id){
+		this.nextPages = nextPages;
+	}
+}
