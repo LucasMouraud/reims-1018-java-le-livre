@@ -42,12 +42,14 @@ public class PageReader{
         // root.size()
 
         // créer un conteneur pour stocker les données
-        JSONObject page_object = (JSONObject) root.get(0);
-        int id = Math.toIntExact((long) page_object.get("id"));
-        String content = (String) page_object.get("content");
+        for(int i=0; i<root.size(); i++){
+          JSONObject page_object = (JSONObject) root.get(i);
+          int id = Math.toIntExact((long) page_object.get("id"));
+          String content = (String) page_object.get("content");
 
-        Page page = new Page(id, content);
-        this.pages.add(page);
+          Page page = new Page(id, content);
+          this.pages.add(page);
+        }
     }
 
     public Page getFirstPage(){
