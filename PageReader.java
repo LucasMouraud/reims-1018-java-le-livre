@@ -38,7 +38,7 @@ public class PageReader{
         JSONArray root = (JSONArray) jsonParsed;
         // root.size()
         
-        // créer un tableau pour stocker les données
+        // créer un conteneur pour stocker les données
         ArrayList<Page> pages = new ArrayList<Page>();
         JSONObject page_object = (JSONObject) root.get(0);
         int id = Math.toIntExact((long) page_object.get("id"));
@@ -46,8 +46,27 @@ public class PageReader{
 
         pages.add(new Page(id, content));
     }
-    public ArrayList<Page> getFirstPage(){
-        return this.pages;
-        
+
+    public PageReader() {
+        this.pages = new ArrayList<Page>();
     }
+
+    public Page getFirstPage(){
+        return this.pages.get(0);
+    }
+
+    private List<Page> pages;
 }
+/*
+PageReader.readJson();
+
+PageReader p1;
+p1 = new PageReader();
+
+p1.getFirstPage();
+
+PageReader p2;
+p2 = new PageReader();
+
+p2.getFirstPage();
+*/

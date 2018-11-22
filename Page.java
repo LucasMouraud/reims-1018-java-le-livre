@@ -24,3 +24,9 @@ public class Page{
 		this.content = content;
 	}
 }
+
+/*
+Page p = new Page(1, "hello");
+p.setId(23);
+p.getId(); // 23
+*/
