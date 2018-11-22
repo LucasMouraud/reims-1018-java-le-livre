@@ -40,7 +40,7 @@ public class PageReader{
         // récupérer la racine du fichier
         JSONArray root = (JSONArray) jsonParsed;
         // root.size()
-        
+
         // créer un conteneur pour stocker les données
         JSONObject page_object = (JSONObject) root.get(0);
         int id = Math.toIntExact((long) page_object.get("id"));
@@ -48,25 +48,10 @@ public class PageReader{
 
         Page page = new Page(id, content);
         this.pages.add(page);
-
     }
 
     public Page getFirstPage(){
         Page page = this.pages.get(0);
         return page;
     }
-
 }
-/*
-PageReader.readJson();
-
-PageReader p1;
-p1 = new PageReader();
-
-p1.getFirstPage();
-
-PageReader p2;
-p2 = new PageReader();
-
-p2.getFirstPage();
-*/
