@@ -8,7 +8,7 @@ public class BookDisplay{
         System.out.println("Bienvenue sur le livre dont vous êtes le sorcier/la sorcière");
     }
 
-    public static String askName(){      
+    public static String askName(){
         System.out.println("Veuillez saisir votre pseudo : ");
         String name  = sc.nextLine();
         return name;
@@ -30,8 +30,8 @@ public class BookDisplay{
             go = askGo();
         }
     }
-    /*
-    public static void displayFirstPage(){
-        System.out.println(PageReader.getFirstPage());
-    }   */ 
+
+    public static void displayFirstPage(Page page){
+        System.out.println(page.getContent());
+		}
 }
