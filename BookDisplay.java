@@ -33,5 +33,6 @@ public class BookDisplay{
 
     public static void displayFirstPage(Page page){
         System.out.println(page.getContent());
+        System.out.println(page.getNextPages());
 		}
 }

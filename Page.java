@@ -4,7 +4,7 @@ public class Page{
 	private String content;
 	private int[] nextPages;
 
-	public Page(int id, String content){
+	public Page(int id, String content, int[] nextPages){
 		this.id = id;
 		this.content = content;
 		this.nextPages = nextPages;
